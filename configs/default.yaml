@@ -1,0 +1,44 @@
+# ============================================================
+# Default config — shared across all models
+# Override per-model settings in model-specific YAML files.
+# ============================================================
+
+# --- Data ---
+data:
+  dataset: cifar100           # cifar100 | tiny_imagenet
+  data_dir: ./data/datasets
+  num_workers: 4
+  image_size: 224             # resize all images to this
+  num_classes: 100
+
+# --- Training ---
+training:
+  epochs: 50
+  batch_size: 128
+  optimizer: adamw
+  learning_rate: 1.0e-3
+  weight_decay: 0.05
+  warmup_epochs: 5
+  scheduler: cosine           # cosine | step
+  mixed_precision: true
+  gradient_clip: 1.0
+  label_smoothing: 0.1
+
+# --- Augmentation ---
+augmentation:
+  random_crop: true
+  random_horizontal_flip: true
+  color_jitter: 0.4
+  auto_augment: rand-m9-mstd0.5-inc1   # RandAugment
+  random_erasing: 0.25
+  mixup_alpha: 0.8
+  cutmix_alpha: 1.0
+
+# --- Evaluation ---
+evaluation:
+  top_k: [1, 5]
+
+# --- Logging ---
+logging:
+  print_freq: 50
+  save_dir: ./outputs

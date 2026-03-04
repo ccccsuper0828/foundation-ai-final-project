@@ -1,0 +1,5 @@
+# ResNet-18 (CNN baseline — ~11M params)
+model:
+  name: resnet18
+  family: cnn
+  pretrained: false

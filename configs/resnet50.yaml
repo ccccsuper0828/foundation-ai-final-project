@@ -1,0 +1,5 @@
+# ResNet-50 (CNN — ~25M params)
+model:
+  name: resnet50
+  family: cnn
+  pretrained: false

@@ -1,0 +1,9 @@
+# Vision Mamba Tiny (SSM — ~7M params)
+# Uses a pure-PyTorch Mamba implementation (no custom CUDA kernels needed)
+model:
+  name: vim_tiny
+  family: mamba
+  pretrained: false
+  d_model: 192
+  n_layers: 12
+  patch_size: 16

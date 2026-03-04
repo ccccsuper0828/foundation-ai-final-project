@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+
+# Local datasets and artifacts
+data/datasets/
+notebooks/data/datasets/
+outputs/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/

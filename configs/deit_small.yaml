@@ -1,0 +1,5 @@
+# DeiT-Small (Vision Transformer — ~22M params)
+model:
+  name: deit_small_patch16_224
+  family: vit
+  pretrained: false

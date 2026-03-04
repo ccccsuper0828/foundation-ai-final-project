@@ -1,0 +1,5 @@
+# ConvNeXt-Tiny (Modern CNN — ~28M params)
+model:
+  name: convnext_tiny
+  family: cnn
+  pretrained: false
